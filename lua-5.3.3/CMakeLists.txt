@@ -38,6 +38,8 @@ add_library(lua_static STATIC ${LUA_LIB_SRCS})
 target_include_directories(lua_static PUBLIC ${LUA_LIB_INCLUDE})
 set(LUA_DEFINITIONS LUA_USE_POSIX)
 
+# non-posix systems
+# windows: https://github.com/LuaDist/lua/blob/lua-5.1/CMakeLists.txt#L43
 if(EMSCRIPTEN OR WIN32)
     unset(LUA_DEFINITIONS)
 endif()
