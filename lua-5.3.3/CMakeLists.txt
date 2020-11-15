@@ -42,6 +42,7 @@ set(LUA_DEFINITIONS LUA_USE_POSIX)
 # windows: https://github.com/LuaDist/lua/blob/lua-5.1/CMakeLists.txt#L43
 if(NOT ${USE_LUA_DEFINITIONS})
     unset(LUA_DEFINITIONS)
+    message(STATUS "not using lua posix")
 endif()
 
 target_compile_definitions(lua_static PUBLIC ${LUA_DEFINITIONS})
