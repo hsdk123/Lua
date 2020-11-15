@@ -3,3 +3,5 @@ project(lua C)
 add_subdirectory(lua-5.3.3)    
 
 option(USE_LUA_DEFINITIONS "Whether or not to use pthreads, etc." ON)
+
+message(STATUS "USE_LUA_DEFINITIONS: ${USE_LUA_DEFINITIONS}")
