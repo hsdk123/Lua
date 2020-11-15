@@ -40,7 +40,7 @@ set(LUA_DEFINITIONS LUA_USE_POSIX)
 
 # non-posix systems
 # windows: https://github.com/LuaDist/lua/blob/lua-5.1/CMakeLists.txt#L43
-if(EMSCRIPTEN OR WIN32)
+if(NOT ${USE_LUA_DEFINITIONS})
     unset(LUA_DEFINITIONS)
 endif()
 
