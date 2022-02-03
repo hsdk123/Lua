@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 project(lua C)
 
 option(USE_LUA_DEFINITIONS "Whether or not to use pthreads, etc." ON)
-option(HAS_SYSTEM "Whether the os has the system function" ON)
+option(LUA_HAS_SYSTEM "Whether the os has the system function" ON)
 
 message(STATUS "USE_LUA_DEFINITIONS: ${USE_LUA_DEFINITIONS}")
 
