@@ -47,7 +47,7 @@ endif()
 
 target_compile_definitions(lua_static PUBLIC ${LUA_DEFINITIONS})
 
-if (HAS_SYSTEM)
+if (LUA_HAS_SYSTEM)
 target_compile_definitions(lua_static PRIVATE LUA_WITH_SYSTEM)
 endif()
 
