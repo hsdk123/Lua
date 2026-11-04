@@ -32,7 +32,8 @@ set(LUA_LIB_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/lutf8lib.c 
     ${CMAKE_CURRENT_SOURCE_DIR}/src/loadlib.c 
     ${CMAKE_CURRENT_SOURCE_DIR}/src/linit.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/luac.c)
+    #${CMAKE_CURRENT_SOURCE_DIR}/src/luac.c # not needed: just the standalone luac compiler program (includes 'main' which we don't want in a lib)
+)
 set(LUA_LIB_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_library(lua_static STATIC ${LUA_LIB_SRCS})
 target_include_directories(lua_static PUBLIC ${LUA_LIB_INCLUDE})
